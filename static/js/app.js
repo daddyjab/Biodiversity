@@ -14,9 +14,22 @@ function buildMetadata(sample) {
   // @TODO: Complete the following function that builds the metadata panel
 
   // Use `d3.json` to fetch the metadata for a sample
+  var sample_route = '/metadata' + sample;
+
+  d3.json(sample_route).then( d => {
     // Use d3 to select the panel with id of `#sample-metadata`
+    metadata_table = d3.select('#sample-metadata');
 
     // Use `.html("") to clear any existing metadata
+    metadata_table.html("");
+
+    // sample_metadata["sample"] = result[0]
+    // sample_metadata["ETHNICITY"] = result[1]
+    // sample_metadata["GENDER"] = result[2]
+    // sample_metadata["AGE"] = result[3]
+    // sample_metadata["LOCATION"] = result[4]
+    // sample_metadata["BBTYPE"] = result[5]
+    // sample_metadata["WFREQ"] = result[6]
 
     // Use `Object.entries` to add each key and value pair to the panel
     // Hint: Inside the loop, you will need to use d3 to append new
@@ -24,6 +37,7 @@ function buildMetadata(sample) {
 
     // BONUS: Build the Gauge Chart
     // buildGauge(data.WFREQ);
+  })
 }
 
 function buildCharts(sample) {
