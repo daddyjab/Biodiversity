@@ -160,7 +160,7 @@ function buildCharts(sample) {
     // descending order by sample value
     dObj.sort( (a, b) => b['sample_value'] - a['sample_value'] );
 
-    console.log(`dObj:`, dObj.slice(0,10) );
+    // console.log(`dObj:`, dObj.slice(0,10) );
 
     // @TODO: Build a Bubble Chart using the sample data
     // hsl(90, 100%, 50%)
@@ -186,11 +186,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("Trace: ", trace)
-
-    // console.log( "Trace X Values:",
-    //   dObj.map( v => `OTU_ID: ${v.otu_id}, Sample Value: ${v.sample_value}<br>Bacteria: ${v.otu_label}` )
-    // );
+    // console.log("Trace: ", trace)
 
     data = [trace];
 

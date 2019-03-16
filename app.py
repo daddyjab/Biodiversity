@@ -88,7 +88,7 @@ def sample_metadata(sample):
         sample_metadata["BBTYPE"] = result[5]       # Belly Button Type: "Innie" vs. "Outie"
         sample_metadata["WFREQ"] = result[6]        # Wash Frequency: Belly button scrubs per week
 
-    print(sample_metadata)
+    # print(sample_metadata)
     return jsonify(sample_metadata)
 
 
