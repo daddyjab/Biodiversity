@@ -1,13 +1,13 @@
-#*****************************************************
+#******************************************************
 #
 # Homework Assignment:
 # 15-Interactive Visualizations and Dashboards - Project Biodiversity
 #
-# @Author: Jeffery Brown (daddyjab)
-# @Date: 3/xx/19
-# @File: app.py
+# @Author Jeffery Brown (daddyjab)
+# @Date 3/15/19
+# @File app.py
 #
-#*****************************************************
+#******************************************************
 
 import os
 
@@ -78,13 +78,13 @@ def sample_metadata(sample):
     # Create a dictionary entry for each row of metadata information
     sample_metadata = {}
     for result in results:
-        sample_metadata["sample"] = result[0]
-        sample_metadata["ETHNICITY"] = result[1]
-        sample_metadata["GENDER"] = result[2]
-        sample_metadata["AGE"] = result[3]
-        sample_metadata["LOCATION"] = result[4]
-        sample_metadata["BBTYPE"] = result[5]
-        sample_metadata["WFREQ"] = result[6]
+        sample_metadata["sample"] = result[0]       # Sample ID: Unique identifier for each Sample
+        sample_metadata["ETHNICITY"] = result[1]    # Ethnicity: Participant ethnicity
+        sample_metadata["GENDER"] = result[2]       # Gender: Participant gender (F = Female, M = Male)
+        sample_metadata["AGE"] = result[3]          # Age: Participant age at time of sampling
+        sample_metadata["LOCATION"] = result[4]     # Location: Participant location at time of sampling
+        sample_metadata["BBTYPE"] = result[5]       # Belly Button Type: "Innie" vs. "Outie"
+        sample_metadata["WFREQ"] = result[6]        # Wash Frequency: Belly button scrubs per week
 
     print(sample_metadata)
     return jsonify(sample_metadata)
@@ -99,6 +99,7 @@ def samples(sample):
     # Filter the data based on the sample number and
     # only keep rows with values above 1
     sample_data = df.loc[df[sample] > 1, ["otu_id", "otu_label", sample]]
+
     # Format the data to send as json
     data = {
         "otu_ids": sample_data.otu_id.values.tolist(),
