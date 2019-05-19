@@ -1,6 +1,6 @@
 # Biodiversity
 
-This application provides Visualizations baterial biodiversity.
+This application provides visualizations of baterial biodiversity.
 
 # Technologies Used
 
@@ -18,6 +18,7 @@ This application provides Visualizations baterial biodiversity.
 # Contributions
 
 * Jeffery Brown: Designed and implemented all application-specific code and visualations for this application
+
 * Data:
     * Data on bacteria present in samples collected from belly buttons of human subjects was provided as input; it was obstained from Rob Dunn Lab: http://robdunnlab.com/projects/belly-button-biodiversity/
 
@@ -36,6 +37,7 @@ The Flask application implemented in [`app.py`](app.py) reads the study data fro
 # Visualization (Tableau Desktop, Tableau Public)
 
 Figure 1 below shows a screenshot of the dashboard, which contains several elements:
+
 * A drop-down menu allowing the user to select a particular sample participant for which results will be displayed
 * A bubble chart showing the relative proportion of bacteria present in the sample for all bacteria observed
 * A donut chart showing the top 10 bacteria present in the sample
@@ -43,4 +45,4 @@ Figure 1 below shows a screenshot of the dashboard, which contains several eleme
 
 | Figure 1: Biodiversity - Screenshot of Interactive Dashboard Visualization |
 |----------|
-| ![Biodiversity Visualization - Screenshot](docs/Biodiversity-visualization.gif "Figure 1: Biodiversity - Screenshot of Interactive Dashboard Visualization") |
+| ![Biodiversity Visualization - Screenshot is loading...](docs/Biodiversity-visualization.gif "Figure 1: Biodiversity - Screenshot of Interactive Dashboard Visualization") |
